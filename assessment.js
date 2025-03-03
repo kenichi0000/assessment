@@ -20,18 +20,39 @@ assessmentButton.addEventListener(
     resultDivision.innerText = '';
     tweetDivision.innerText = '';
     //tweetのaタグを作成
-    
-
     // ヘッダー作成
+    /*
     const header = document.createElement('h3');
     // 文字列の登録
     header.innerText = '診断結果';
+    
     resultDivision.appendChild(header);
     // 表示エリアに追加
     const paragraph = document.createElement('p');
     const result = assessment(userName);
     paragraph.innerText = result;
     resultDivision.appendChild(paragraph);
+    */
+
+    //headerDivisionの作成
+    const headerDivision = document.createElement('div');
+    headerDivision.setAttribute('class','card-header text-bg-primary');
+    headerDivision.innerText="診断結果";
+
+    //bodyDivisionの作成
+    const bodyDivision = document.createElement('div');
+    bodyDivision.setAttribute('class','card-body');
+
+
+    const paragraph = document.createElement('p');
+    paragraph.setAttribute('class','card-text');
+    const result=assessment(userName);
+    paragraph.innerText = result;
+    bodyDivision.appendChild(paragraph);
+
+    resultDivision.setAttribute('class','card');
+    resultDivision.appendChild(headerDivision);
+    resultDivision.appendChild(bodyDivision);
     console.log(userName);
 
     const anchor = document.createElement('a');
