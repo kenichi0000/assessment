@@ -156,9 +156,13 @@ function rotateHeading(){
   degree += 6;
   degree = degree % 360;
   if(degree === 90){
-    obake.setAttribute('src', 'img/omote.PNG');
+    // obake.setAttribute('src', 'img/omote.PNG');
+    obake.setAttribute('src', 'img/image.PNG');
+    
   }else if(degree === 270 ){
-    obake.setAttribute('src', 'img/ura.PNG');
+    // obake.setAttribute('src', 'img/ura.PNG');
+    obake.setAttribute('src', 'img/image.PNG');
+
   }
   obake.style.transform = 'rotateY('+degree + 'deg)'; 
 }
