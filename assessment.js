@@ -157,11 +157,11 @@ function rotateHeading(){
   degree = degree % 360;
   if(degree === 90){
     // obake.setAttribute('src', 'img/omote.PNG');
-    //obake.setAttribute('src', 'img/image.png');
+    obake.setAttribute('src', 'img/image.png');
     
   }else if(degree === 270 ){
     // obake.setAttribute('src', 'img/ura.PNG');
-    //obake.setAttribute('src', 'img/image.png');
+    obake.setAttribute('src', 'img/image.png');
 
   }
   obake.style.transform = 'rotateY('+degree + 'deg)'; 
