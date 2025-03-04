@@ -36,7 +36,7 @@ assessmentButton.addEventListener(
 
     //headerDivisionの作成
     const headerDivision = document.createElement('div');
-    headerDivision.setAttribute('class','card-header text-bg-primary');
+    headerDivision.setAttribute('class','card-header text-bg-info');
     headerDivision.innerText="診断結果";
 
     //bodyDivisionの作成
@@ -149,4 +149,17 @@ function test() {
   console.assert(assessment(name) === assessment(name), '入力が同じ名前なら同じ診断結果を出力する処理が正しくありません。');
   console.log('診断結果の文章のテスト終了');
 }
-test();
+
+let obake = document.getElementById("image");
+let degree = 0 ;
+function rotateHeading(){
+  degree += 6;
+  degree = degree % 360;
+  if(degree === 90){
+    obake.setAttribute('src', 'img/omote.PNG');
+  }else if(degree === 270 ){
+    obake.setAttribute('src', 'img/ura.PNG');
+  }
+  obake.style.transform = 'rotateY('+degree + 'deg)'; 
+}
+setInterval(rotateHeading,100);
